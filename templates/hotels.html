@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotels | TheCenter</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">TheCenter</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/logout">Sign Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <form action="/hotels" method="get">
+                <div class="form-group">
+                    <label for="searchField">Filter by Name:</label>
+                    <input type="text" class="form-control" id="searchField" name="searchTerm" placeholder="Enter hotel name">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            #foreach($name in $hotelNames)
+            <div class="hotel-list">
+                <h5><a href="/reviews?name=$name">$name</a></h5>
+            </div>
+            #end
+        </div>
+    </div>
+</div>
+
+<div class="text-center">
+    <div class="pagination" align="center">
+        <button id="prevPage" onclick="changePage(-1)">Previous</button>
+        <span id="currentPage">1</span>
+        <button id="nextPage" onclick="changePage(1)">Next</button>
+    </div>
+</div>
+</div>
+
+<script>
+    let currentPage = 1;
+    const pageSize = 15;
+    const hotels = document.getElementsByClassName('hotel-list');
+    const totalPages = Math.ceil(hotels.length / pageSize);
+    function showPage(page) {
+        for (let i = 0; i < hotels.length; i++) {
+            hotels[i].style.display = 'none';
+        }
+        const start = (page - 1) * pageSize;
+        const end = start + pageSize;
+        for (let i = start; i < end && i < hotels.length; i++) {
+            hotels[i].style.display = '';
+        }
+        document.getElementById('currentPage').innerText = `Page ${page} of ${totalPages}`;
+        document.getElementById('prevPage').disabled = page === 1;
+        document.getElementById('nextPage').disabled = page === totalPages;
+    }
+
+    function changePage(increment) {
+        currentPage += increment;
+        if (currentPage < 1) currentPage = 1;
+        if (currentPage > totalPages) currentPage = totalPages;
+        showPage(currentPage);
+    }
+    window.onload = () => {
+        showPage(currentPage);
+    }
+</script>
+</body>
+</html>

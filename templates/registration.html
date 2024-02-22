@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register | TheCenter</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <form method="post" action="$actionUrl">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <div id="clientError" class="alert alert-danger" style="display: none;"></div>
+      #if($request.getAttribute("error"))
+      <div class="alert alert-danger">
+        $request.getAttribute("error")
+      </div>
+      #end
+      <hr>
+      <label for="name"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="name" id="name" required><br><br>
+      <label for="pass"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
+      <hr>
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn" value="Register">Register</button>
+    </div>
+    <br>
+    <div class="container signin">
+      <p>Already have an account? <a href="/login">Sign in</a>.</p>
+    </div>
+  </form>
+</body>
+</html>
+
+<script>
+function validateForm() {
+    let password = document.getElementById("pass").value;
+    if (!isValidPassword(password)) {
+        displayClientError("Password does not meet requirements (At least 4 characters and includes a special character)");
+        return false;
+    }
+    return true;
+}
+
+function isValidPassword(password) {
+    return password.length >= 4 && /[!@#$%^&*(),.?":{}|<>]/g.test(password);
+}
+
+function displayClientError(message) {
+    let errorDiv = document.getElementById("clientError");
+    errorDiv.innerHTML = message;
+    errorDiv.style.display = 'block';
+}
+</script>
+
+<style>
+* {box-sizing: border-box}
+.container {
+  padding: 16px;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity:1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
