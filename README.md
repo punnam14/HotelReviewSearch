@@ -19,7 +19,6 @@ A Hotel Search website  <br><br>
 ![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.47.55%20PM.png) <br><br>
 > Used MySql database to store all data, including hotels and reviews, and the data required to implement features such as "favorite hotels", "history of Expedia clicks" etc. All operations used the database (accessed using jdbc), including add/edit/delete a review.   <br><br>
 ![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.51.19%20PM.png) <br><br>
-![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.51.19%20PM.png) <br><br>
 > Used Ajax (to update only the part of the webpage without reloading the whole page) for the following features:  
 > • Displayed the weather at the latitude and longitude of the given hotel  
 ![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.48.31%20PM.png) <br><br>
