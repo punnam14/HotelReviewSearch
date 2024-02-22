@@ -1,7 +1,7 @@
 # HotelReviewSearch
 A Hotel Search website  
 Features and Description: Used Bootstrap templates to give the website a clean, "professional" look. Used templates (and Velocity) for all pages. This includes the registration and login pages too.   
-![Alt text for the image]([[images/example.png](https://github.com/punnam14/HotelReviewSearch/blob/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.47.55%20PM.png)](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.47.55%20PM.png))
+![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.47.55%20PM.png)
 Used MySql database to store all data, including hotels and reviews, and the data required to implement features such as "favorite hotels", "history of Expedia clicks" etc. All operations used the database (accessed using jdbc), including add/edit/delete a review.  
 Used Ajax (to update only the part of the webpage without reloading the whole page) for the following features:  
 • Displayed the weather at the latitude and longitude of the given hotel  
