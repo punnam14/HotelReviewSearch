@@ -1,6 +1,6 @@
 # HotelReviewSearch
 A Hotel Search website  
-Features and Description: Used Bootstrap templates to give the website a clean, "professional" look. Used templates (and Velocity) for all pages. This includes the registration and login pages too.   <br>
+Features and Description: Used Bootstrap templates to give the website a clean, "professional" look. Used templates (and Velocity) for all pages. This includes the registration and login pages too.   <br><br>
 ![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.49.49%20PM.png)
 ![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.47.55%20PM.png)
 Used MySql database to store all data, including hotels and reviews, and the data required to implement features such as "favorite hotels", "history of Expedia clicks" etc. All operations used the database (accessed using jdbc), including add/edit/delete a review.  
