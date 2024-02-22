@@ -14,6 +14,7 @@ Storeed a history of all expedia hotel links visited by the given user.
 • Allowed the user to view and clear that history. This page is available only to users who successfully logged in.  
 Provided pagination:  
 • Showed a fixed number of reviews on each page;  
+![Alt text for the image](https://raw.githubusercontent.com/punnam14/HotelReviewSearch/main/Website%20Demo%20Images/Screenshot%202024-02-21%20at%205.48.58%20PM.png)
 • The user is able to navigate through multiple pages with reviews.  
 Storeed and displayed the last date and time the user logged in to the website before this time (the feature is available only for logged in users).  
 Floowed good object-oriented design principles throughout the project.   
