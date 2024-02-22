@@ -1,7 +1,17 @@
 # HotelReviewSearch   
 A Hotel Search website  <br><br>
 * Core Technologies <br><br>
-
+> Java: Primary programming language, used for the development of the server-side logic and functionalities. <br>
+> Jetty Server: Used to deploy and manage the web application. Jetty is a lightweight, highly scalable Java-based web server and servlet engine. <br>
+> Servlets: Used Java Servlets for handling requests and responses between the web server and clients. Servlets are Java programming language classes that are used to extend the capabilities of servers that host applications accessed by means of a request-response programming model.
+> Velocity Template Engine: Utilized for rendering HTML content on the server side. Velocity is a Java-based template engine that provides a simple and powerful way to generate web content.
+> MySQL Database: Used JDBC for database connectivity. Interacts with a MySQL database for data persistence, including operations like creating tables, inserting, and querying data.
+> Apache Commons and Gson: Libraries used for utility functions such as string escaping and JSON parsing, respectively.
+> Maven: Used for project management and build automation.
+> Google Gson: Used for JSON parsing and serialization/deserialization of Java objects to and from JSON.
+> Java Concurrency Utilities: Used ExecutorService and Phaser in ReviewManager.java for managing concurrent tasks and synchronization (Multithreaded reading a large number of reviews from JSON files concurrently).
+> HTML CSS and Bootstrap: For the front-end development
+> JavaScript and jQuery: For the validation functions in HTML forms. <br> <br>
 
 * Features and Description: <br><br>
 Used Bootstrap templates to give the website a clean, "professional" look. Used templates (and Velocity) for all pages. This includes the registration and login pages too.   <br><br>
